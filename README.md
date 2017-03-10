@@ -36,31 +36,12 @@ To pass options to the plugin, simply pass an object to the call like so:
     $("#nav").scrollspy({ offset: -25 });
 ```
 
-## Available options
+## Options
+Scrollspy.js can accept an options object to alter the way it behaves. These are the supported settings:
 
-Currently there are only a few options:
-
-### activeClass
-
-This allows you to define your own active class that gets added to the **li** element of the menu.
-*default: 'active'*
-
-### animate
-
-This tells the plugin whether it should animate the scroll when a link in your menu is click or not.
-*default: false*
-
-### offset
-
-This tells the plugin if there is any need to include an offset.
-*default: 0*
-
-### onChange
-
-This function is called whenever the document scrolls into a new **page**.
-
-### onExit
-
-In some cercumstances there will be a **page** that is not included in the menu. When scrollspy gets to this area the onExit function is called.
-
-
+ * __activeClass__: The active class that gets added to the **li** element of the menu. Default is `active`
+ * __animate__: If `true` will animate the scroll when a link is clicked. Default is `false`
+ * __offset__: Adds an offset to when the link becomes active. Default is `0`
+ * __onChange__: A callback triggered when the document scrolls into a new **target**
+ * __onExit__: A callback triggered when the document scrolls on to a an element that is not a **target**
+ * __duration__: Duration of the scroll animation when a link is clicked, default is `1000`
