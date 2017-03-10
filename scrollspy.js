@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * Scrollspy Plugin
  * Author: r3plica
  * Licensed under the MIT license
@@ -17,7 +17,8 @@
                 activeClass: 'active',
                 animate: false,
                 offset: 0,
-                container: window
+                container: window,
+                duration: 1000,
             };
 
             // Add any overriden options to a new object
@@ -65,7 +66,7 @@
             // Find our link from a hash
             var findLink = function (links, hash) {
 
-                // For each link
+                // For each link 
                 for (var i = 0; i < links.length; i++) {
 
                     // Get our current link
@@ -127,7 +128,7 @@
                             if (options.animate) {
 
                                 // Animate our scroll
-                                $('html, body').animate({ scrollTop: top }, 1000);
+                                $('html, body').animate({ scrollTop: top }, options.duration);
                             } else {
 
                                 // Scroll to our position
